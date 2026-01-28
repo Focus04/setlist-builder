@@ -6,8 +6,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-public class CursSpringApplication {
+public class SetListBuilder {
 	public static void main(String[] args) {
-		SpringApplication.run(CursSpringApplication.class, args);
+		SpringApplication.run(SetListBuilder.class, args);
 	}
 }
