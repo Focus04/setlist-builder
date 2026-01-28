@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>SetList Builder</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<a class="navbar-brand ps-3" href="#"><i class="bi bi-music-note-list"></i> SetList Builder</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/musicieni}">Artists</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/melodii}">Tracks</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/concerte}">Concerts</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center">Edit Track Details</h1>
+				<div class="card-body">
+					<form th:action="@{/melodii/{idmelodie} (idmelodie=${melodie.idmelodie})}" th:object="${melodie}" method="POST">
+						<div class="form-group">
+							<label>Track Name</label>
+							<input type="text" name="numemelodie" th:field="*{numemelodie}" class="form-control" placeholder="Name of the track you want to edit" />
+						</div>
+
+						<div class="form-group">
+							<label>Track Duration</label>
+							<input type="text" name="duratamelodie" th:field="*{duratamelodie}" class="form-control" placeholder="Duration of the track in minutes" />
+						</div>
+
+						<div class="form-group">
+							<label>Track Genre</label>
+							<input type="text" name="genmelodie" th:field="*{genmelodie}" class="form-control" placeholder="Genre of the track" />
+						</div>
+
+						<div class="box-footer mt-3">
+							<button type="submit" class="btn btn-primary px-4 py-2">Edit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
