@@ -1,7 +1,5 @@
 # 🎵 SetList Builder
 
-> A full-stack Festival Management System built with Spring Boot and MySQL.
-
 **SetList Builder** is a web application designed to help festival organizers manage their lineups. It allows users to curate a database of musicians and songs, and schedule them onto specific festival stages with pricing and timing details.
 
 ---
@@ -13,15 +11,15 @@ The application is deployed on Railway and can be accessed **[here](https://setl
 
 ## ✨ Features
 
-### 🎸 Artist Management (`/musicieni`)
+### 🎸 Manage Artists (`/musicieni`)
 * Add, edit, and remove artists from the festival roster.
 * Categorize musicians by genre (Rock, Pop, Jazz, etc.).
 
-### 💿 Track Curation (`/melodii`)
+### 💿 Curate Tracks (`/melodii`)
 * Manage a library of songs available for performance.
 * Track details include duration and genre.
 
-### 🎪 Stage & Concert Scheduling (`/concerte`)
+### 🎪 Schedule Concerts (`/concerte`)
 * **The Core Feature:** Link Artists and Tracks to create a Concert event.
 * Set ticket prices, start times, and end times.
 * Foreign Key relationships ensure data integrity (you can't schedule a non-existent artist).
@@ -46,7 +44,7 @@ The application is deployed on Railway and can be accessed **[here](https://setl
 ## ⚙️ Configuration & Setup
 
 ### Prerequisites
-* Java Development Kit (JDK) 21 or higher
+* Java Development Kit 21
 * MySQL Server (if running locally)
 * Maven
 
