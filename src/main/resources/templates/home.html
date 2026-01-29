@@ -8,13 +8,12 @@
     
     <style>
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1459749411177-2a254188c885?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 100px 0;
-            margin-bottom: 2rem;
-            border-radius: 0 0 20px 20px;
+            margin-bottom: 1.5rem;
         }
         
         .feature-card {
@@ -37,7 +36,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<a class="navbar-brand ps-3" href="#"><i class="bi bi-music-note-list"></i>SetList Builder</a>
+		<a class="navbar-brand ps-3" href="/"><i class="bi bi-music-note-list"></i> SetList Builder</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
@@ -55,7 +54,7 @@
     <div class="text-center hero-section">
         <div class="container">
             <h1 class="display-4 fw-bold">Build Your Ultimate Festival</h1>
-            <p class="lead mb-4">Manage artists and tracks, and schedule the perfect stages.</p>
+            <p class="lead mb-4">Manage artists, tracks and schedule the perfect stages.</p>
             <a th:href="@{/concerte}" class="btn btn-primary btn-lg px-4">View Schedule</a>
         </div>
     </div>
