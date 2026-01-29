@@ -19,7 +19,7 @@ The application is deployed on Railway and can be accessed **[here](https://setl
 * Manage a library of songs available for performance.
 * Track details include duration and genre.
 
-### 🎪 Schedule Concerts (`/concerte`)
+### 🎪 Manage Stages (`/concerte`)
 * **The Core Feature:** Link Artists and Tracks to create a Concert event.
 * Set ticket prices, start times, and end times.
 * Foreign Key relationships ensure data integrity (you can't schedule a non-existent artist).
