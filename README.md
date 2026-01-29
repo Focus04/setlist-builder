@@ -55,3 +55,40 @@ The application is deployed on Railway and can be accessed **[here](https://setl
 git clone https://github.com/focus04/setlist-builder.git
 cd setlist-builder
 ```
+
+### 2. Database Configuration
+The application uses application.properties to switch between local and remote environments.
+For Local Development:
+Update src/main/resources/application.properties:
+```properties
+server.port=8080
+spring.application.name=SetListBuilder
+
+spring.datasource.url=jdbc:mysql://localhost:3306/YOUR_LOCAL_DB?useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=YOUR_LOCAL_PASSWORD
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+For Railway (Production):
+The app automatically detects Railway environment variables:
+```properties
+server.port=${PORT:8080}
+spring.application.name=SetListBuilder
+
+spring.datasource.url=jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQL_DATABASE}
+spring.datasource.username=${MYSQLUSER}
+spring.datasource.password=${MYSQLPASSWORD}
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+### 3. Run the App
+You can run the application using Maven:
+```properties
+mvn spring-boot:run
+```
+Once running, open your browser and go to: http://localhost:8080
