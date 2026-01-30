@@ -25,6 +25,12 @@ public class MusicianController {
 		return "musicieni";
 	}
 	
+	@PostMapping("/musicieni")
+	public String saveMusician(Musician musician) {
+		musicianService.saveMusician(musician);
+		return "redirect:/musicieni";
+	}
+	
 	@GetMapping("/musicieni/new")
 	public String createMusicianForm(Model model) {
 		Musician musician = new Musician();
@@ -32,16 +38,17 @@ public class MusicianController {
 		return "create_musician";
 	}
 	
-	@PostMapping("/musicieni")
-	public String saveMusician(Musician musician) {
-		musicianService.saveMusician(musician);
-		return "redirect:/musicieni";
-	}
-	
 	@GetMapping("/musicieni/edit/{idmusician}")
 	public String editMusicianForm(@PathVariable Long idmusician, Model model) {
 		model.addAttribute("musician", musicianService.getMusicianById(idmusician));
 		return "edit_musician";
+	}
+	
+	
+	@GetMapping("/musicieni/delete/{idmusician}")
+	public String deleteMusician(@PathVariable Long idmusician) {
+		musicianService.deleteMusicianById(idmusician);
+		return "redirect:/musicieni";
 	}
 
 	@PostMapping("/musicieni/{idmusician}")
@@ -55,11 +62,4 @@ public class MusicianController {
 		musicianService.updateMusician(musicianExistent);
 		return "redirect:/musicieni";		
 	}
-	
-	
-	@GetMapping("/musicieni/{idmusician}")
-	public String deleteMusician(@PathVariable Long idmusician) {
-		musicianService.deleteMusicianById(idmusician);
-		return "redirect:/musicieni";
-	}	
 }

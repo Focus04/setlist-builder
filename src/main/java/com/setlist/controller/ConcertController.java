@@ -68,7 +68,7 @@ public class ConcertController {
 		return "edit_concert";
 	}
 	
-	@GetMapping("/concerte/{idconcert}")
+	@GetMapping("/concerte/delete/{idconcert}")
 	public String deleteConcert(@PathVariable Long idconcert) {
 		concertService.deleteConcertById(idconcert);
 		return "redirect:/concerte";

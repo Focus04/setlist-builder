@@ -43,7 +43,7 @@ public class MelodieController {
 		return "edit_melodie";
 	}
 	
-	@GetMapping("/melodii/{idmelodie}")
+	@GetMapping("/melodii/delete/{idmelodie}")
 	public String deleteMelodie(@PathVariable Long idmelodie) {
 		melodieService.deleteMelodieById(idmelodie);
 		return "redirect:/melodii";
