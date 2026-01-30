@@ -58,7 +58,7 @@
 			</thead>
 
 			<tbody>
-				<tr th:each="track : ${melodii}" th:onclick="'window.location.href=\'/melodii/edit/' + ${track.idmelodie} + '\''" style="cursor: pointer">
+				<tr th:each="melodie : ${melodii}" th:onclick="'window.location.href=\'/melodii/edit/' + ${melodie.idmelodie} + '\''" style="cursor: pointer">
 					<td th:text="${melodie.idmelodie}"></td>
 					<td th:text="${melodie.numemelodie}"></td>
 					<td th:text="${melodie.genmelodie}"></td>
