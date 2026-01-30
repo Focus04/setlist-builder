@@ -75,8 +75,11 @@
 					<td th:text="${concert.orainceput}"></td>
 					<td th:text="${concert.orafinal}"></td>
 					<td>
-						<a th:href="@{/concerte/edit/{idconcert}(idconcert=${concert.idconcert})}" class="btn btn-primary"><i class="bi bi-pen"></i> Edit</a>
-						<a th:href="@{/concerte/delete/{id}(id=${concert.idconcert})}" class="btn btn-danger btn-sm">Delete</a>
+						<a th:href="@{/concerte/delete/{id}(id=${concert.idconcert})}" 
+						class="btn btn-danger btn-sm" 
+						onclick="return event.stopPropagation();">
+							<i class="bi bi-trash3"></i> Delete
+						</a>
 					</td>
 				</tr>
 			</tbody>
