@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.setlist.entity;
 
 import java.util.Set;
 

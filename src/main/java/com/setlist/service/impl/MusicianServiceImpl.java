@@ -1,13 +1,13 @@
-package com.example.demo.service.impl;
+package com.setlist.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.Musician;
-import com.example.demo.repository.MusicianRepository;
-import com.example.demo.service.MusicianService;
+import com.setlist.entity.Musician;
+import com.setlist.repository.MusicianRepository;
+import com.setlist.service.MusicianService;
 
 @Service
 public class MusicianServiceImpl implements MusicianService{

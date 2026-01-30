@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.setlist.service;
 
 import java.util.List;
 
-import com.example.demo.entity.Concert;
+import com.setlist.entity.Concert;
 
 public interface ConcertService {
 	List<Concert> getAllConcerte();

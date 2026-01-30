@@ -1,7 +1,7 @@
-package com.example.demo.repository;
+package com.setlist.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.entity.Concert;
+import com.setlist.entity.Concert;
 
 public interface ConcertRepository extends JpaRepository<Concert, Long>{}

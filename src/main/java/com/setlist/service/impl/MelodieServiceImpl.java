@@ -1,13 +1,13 @@
-package com.example.demo.service.impl;
+package com.setlist.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.Melodie;
-import com.example.demo.repository.MelodieRepository;
-import com.example.demo.service.MelodieService;
+import com.setlist.entity.Melodie;
+import com.setlist.repository.MelodieRepository;
+import com.setlist.service.MelodieService;
 
 @Service
 public class MelodieServiceImpl implements MelodieService{

@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.setlist.controller;
 
 import java.util.List;
 
@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.entity.Concert;
-import com.example.demo.service.ConcertService;
-
-import com.example.demo.entity.Musician;
-import com.example.demo.repository.MelodieRepository;
-import com.example.demo.repository.MusicianRepository;
-import com.example.demo.entity.Melodie;
+import com.setlist.entity.Concert;
+import com.setlist.entity.Melodie;
+import com.setlist.entity.Musician;
+import com.setlist.repository.MelodieRepository;
+import com.setlist.repository.MusicianRepository;
+import com.setlist.service.ConcertService;
 
 @Controller
 public class ConcertController {
