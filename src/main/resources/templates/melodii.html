@@ -9,6 +9,7 @@
 	
 	<style>
     body {
+    	padding-top: 70px;
         background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
                     url('https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1920&q=80');
         background-size: cover;
@@ -19,7 +20,7 @@
 	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<a class="navbar-brand ps-3" href="/"><i class="bi bi-music-note-list"></i> SetList Builder</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,7 +30,7 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" th:href="@{/musicieni}">Artists</a></li>
-				<li class="nav-item"><a class="nav-link" th:href="@{/melodii}">Tracks</a></li>
+				<li class="nav-item"><a class="nav-link active" th:href="@{/melodii}">Tracks</a></li>
 				<li class="nav-item"><a class="nav-link" th:href="@{/concerte}">Concerts</a></li>
 			</ul>
 		</div>
