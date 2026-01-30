@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered table-hover">
 			<thead class="table-dark">
 				<tr>
 					<th>Concert ID</th>
@@ -64,7 +64,7 @@
 			</thead>
 
 			<tbody>
-				<tr th:each="concert: ${concerte}">
+				<tr th:each="concert : ${concerte}" th:onclick="'window.location.href=\'/concerte/edit/' + ${concert.idconcert} + '\''" style="cursor: pointer">
 					<td th:text="${concert.idconcert}"></td>
 					<td th:text="${concert.musician.prenumemusician}"></td>
 					<td th:text="${concert.musician.numemusician}"></td>
@@ -75,8 +75,8 @@
 					<td th:text="${concert.orainceput}"></td>
 					<td th:text="${concert.orafinal}"></td>
 					<td>
-						<a th:href="@{/concerte/edit/{idconcert}(idconcert=${concert.idconcert})}" class="btn btn-primary"><i class="bi bi-pen"></i> Edit</a> 
-						<a th:href="@{/concerte/{idconcert}(idconcert=${concert.idconcert})}" class="btn btn-danger"><i class="bi bi-trash3"></i> Delete</a>
+						<a th:href="@{/concerte/edit/{idconcert}(idconcert=${concert.idconcert})}" class="btn btn-primary"><i class="bi bi-pen"></i> Edit</a>
+						<a th:href="@{/concerte/delete/{id}(id=${concert.idconcert})}" class="btn btn-danger btn-sm">Delete</a>
 					</td>
 				</tr>
 			</tbody>
