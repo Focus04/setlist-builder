@@ -58,19 +58,19 @@
 			</thead>
 
 			<tbody>
-				<tr th:each="musician : ${musicieni}" th:onclick="'window.location.href=\'/musicieni/edit/' + ${musician.idmusician} + '\''" style="cursor: pointer">
-					<td th:text="${musician.idmusician}"></td>
-					<td th:text="${musician.prenumemusician}"></td>
-					<td th:text="${musician.numemusician}"></td>
-					<td th:text="${musician.genmusician}"></td>
-					<td>
-						<a th:href="@{/musicieni/delete/{id}(id=${musician.idmusician})}" 
-						class="btn btn-danger btn-sm" 
-						onclick="return event.stopPropagation();">
-							<i class="bi bi-trash3"></i> Delete
-						</a>
-					</td>
-				</tr>
+<tr th:each="musician : ${musicieni}" th:onclick="'window.location.href=\'/musicieni/edit/' + ${musician.idmusician} + '\''" style="cursor: pointer">
+	<td th:text="${musician.idmusician}"></td>
+	<td th:text="${musician.prenumemusician}"></td>
+	<td th:text="${musician.numemusician}"></td>
+	<td th:text="${musician.genmusician}"></td>
+	<td>
+		<a th:href="@{/musicieni/delete/{id}(id=${musician.idmusician})}" 
+		class="btn btn-danger btn-sm" 
+		onclick="return event.stopPropagation();">
+			<i class="bi bi-trash3"></i> Delete
+		</a>
+	</td>
+</tr>
 			</tbody>
 
 		</table>

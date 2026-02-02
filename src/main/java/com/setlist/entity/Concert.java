@@ -42,6 +42,7 @@ public class Concert {
 		this.numeconcert = numeconcert;
 		this.orainceput = orainceput;
 		this.orafinal = orafinal;
+		this.pretconcert = pretconcert;
 	}
 
 	public Long getIdconcert() {

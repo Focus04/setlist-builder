@@ -11,7 +11,6 @@ import com.setlist.service.MusicianService;
 
 @Controller
 public class MusicianController {
-	
 	private MusicianService musicianService;
 
 	public MusicianController(MusicianService musicianService) {
