@@ -1,6 +1,8 @@
 package com.setlist.entity;
 
 import jakarta.persistence.*;
+
+import java.math.BigDecimal;
 import java.time.LocalTime;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -19,23 +21,23 @@ public class Concert {
     @JoinColumn(name = "idmusician", nullable = false)
     private Musician musician;
 
-	@Column(name = "numeconcert", nullable = false)
-	private String numeconcert;
+	@Column(name = "numeconcert")
+	private String numeconcert = "";
 
-	@Column(name = "orainceput", nullable = false)
+	@Column(name = "orainceput")
 	@DateTimeFormat(pattern = "HH:mm")
-	private LocalTime orainceput;
+	private LocalTime orainceput = LocalTime.of(0, 0);
 	
-	@Column(name = "orafinal", nullable = false)
+	@Column(name = "orafinal")
 	@DateTimeFormat(pattern = "HH:mm")
-	private LocalTime orafinal;
+	private LocalTime orafinal = LocalTime.of(0, 0);
 	
-	@Column(name = "pretconcert", nullable = false)
-	private Float pretconcert;
+	@Column(name = "pretconcert")
+	private BigDecimal pretconcert = BigDecimal.ZERO;
 
 	public Concert() {}
 
-	public Concert(Melodie melodie, Musician musician, String numeconcert, LocalTime orainceput, LocalTime orafinal, Float pretconcert) {
+	public Concert(Melodie melodie, Musician musician, String numeconcert, LocalTime orainceput, LocalTime orafinal, BigDecimal pretconcert) {
 		super();
 		this.melodie = melodie;
 		this.musician = musician;
@@ -93,11 +95,11 @@ public class Concert {
 		this.orafinal = orafinal;
 	}
 	
-	public Float getPretconcert() {
+	public BigDecimal getPretconcert() {
 		return this.pretconcert;
 	}
 
-	public void setPretconcert(Float pretconcert) {
+	public void setPretconcert(BigDecimal pretconcert) {
 		this.pretconcert = pretconcert;
 	}
 }

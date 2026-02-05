@@ -11,14 +11,14 @@ public class Melodie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idmelodie;
 
-	@Column(name = "numemelodie", nullable = false)
-	private String numemelodie;
+	@Column(name = "numemelodie")
+	private String numemelodie = "";
 
 	@Column(name = "genmelodie")
-	private String genmelodie;
+	private String genmelodie = "";
 
 	@Column(name = "duratamelodie")
-	private Long duratamelodie;
+	private Long duratamelodie = 0L;
 	
 	@OneToMany(mappedBy="melodie", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Concert> concert;
