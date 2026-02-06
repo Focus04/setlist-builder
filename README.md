@@ -90,3 +90,6 @@ You can run the application using Maven:
 mvn spring-boot:run
 ```
 Once running, open your browser and go to: http://localhost:8080
+
+## 💻 Desktop App
+Instead of the web app, feel free to use **[the desktop alternative](https://github.com/Focus04/setlist-builder)**.
