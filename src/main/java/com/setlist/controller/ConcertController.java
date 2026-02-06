@@ -82,6 +82,7 @@ public class ConcertController {
 		concertExistent.setMelodie(concert.getMelodie());
 		concertExistent.setNumeconcert(concert.getNumeconcert());
 		concertExistent.setOrainceput(concert.getOrainceput());
+		concertExistent.setOrafinal(concert.getOrafinal());
 		concertExistent.setPretconcert(concert.getPretconcert());
 
 		concertService.updateConcert(concertExistent);
