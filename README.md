@@ -4,11 +4,6 @@
 
 ---
 
-## 🚀 Live Demo
-The application is deployed on Railway and can be accessed **[here](https://setlist-builder.up.railway.app/)**.
-
----
-
 ## ✨ Features
 
 ### 🎸 Manage Artists (`/musicieni`)
